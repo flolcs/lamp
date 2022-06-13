@@ -1,0 +1,304 @@
+/*=============== FONTS ===============*/
+
+@font-face {
+  font-family: "font-1";
+  src: url(../fonts/sf-compact-display-medium.otf);
+}
+
+@font-face {
+  font-family: "font-2";
+  src: url(../fonts/sf-compact-display-thin.otf);
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --color1: #000000;
+  --color2: #3D9090;
+  --color3: #DBEEEE;
+  --color4: #94A6A6;
+  --color5: #E4D7B9;
+  --color6 : #BDDDDD;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--color5);
+}
+
+body {
+  font-family: "font-1";
+  font-size: 1rem;
+  color: var(--color1);
+  background-color: var(--color3);
+}
+
+/*=============== HEADER ===============*/
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#logo {
+  width: 125px;
+}
+
+nav {
+  width: 400px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+  color: var(--color2);
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*=============== MAIN ===============*/
+main {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  width: 100%;
+  height: 90vh;
+  padding-right: 20px;
+}
+
+.left {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.left_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+p {
+  font-family: "font-2";
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.left_img {
+  position: relative;
+  width: 100%;
+}
+
+.left_img::after {
+  content: "";
+  background-color: var(--color4);
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.elipse {
+  position: relative;
+  width: 50%;
+}
+
+.circle {
+  background-color: var(--color5);
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+  top: 0%;
+  left: 0%;
+  transform: translate(-10%, 10%);
+}
+
+h1 {
+  font-size: 12px;
+  font-family: "font-2";
+}
+
+b {
+  font-family: "font-1";
+}
+
+.description {
+  position: absolute;
+  top: 60%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.left_lamp {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: 400px;
+  width: 120px;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  transform: translateY(-35%);
+  height: 60%;
+  width: 20%;
+  background-color: var(--color6);
+  border-top-left-radius: 10px;
+}
+
+.menu_lamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.choix_lamp {
+  height: 80%;
+  width: 35%;
+  position: relative;
+}
+
+.fond_choix_lamp {
+  height: 25%;
+  width: 80%;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.fond_choix_lamp:hover {
+  background-color: var(--color3);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.lampActive {
+  background-color: var(--color3);
+}
+
+.mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 15%;
+}
+
+.light {
+  width: 50%;
+  height: 100%;
+  background-color: var(--color5);
+  border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.light:hover {
+  filter: brightness(110%);
+}
+.dark:hover {
+  filter: brightness(110%);
+}
+
+.modeActive {
+  filter: brightness(110%);
+}
+
+.dark{
+  width: 50%;
+  height: 100%;
+  background-color: var(--color4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img_mode {
+  height: 15px;
+  width: 15px;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#fond {
+  width: 100%;
+  height: 100%;
+}
+
+.right_lamp {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 30%;
+}
+
+#leftLamp2 {
+  visibility: hidden;
+}
+#leftLamp3 {
+  visibility: hidden;
+}
+
+#rightLamp2 {
+  visibility: hidden;
+}
+#rightLamp3 {
+  visibility: hidden;
+}
+
+
+/*=============== FOOTER ===============*/
+
+/*=============== RESPONSIVE ===============*/
+@media (min-width: 1441px) {
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 425px) and (max-width: 767px) {
+}
+@media (min-width: 375px) and (max-width: 424px) {
+}
+@media (max-width: 374px) {
+}
